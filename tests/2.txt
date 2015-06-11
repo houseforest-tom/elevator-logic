@@ -1,0 +1,20 @@
+// Call Elevator Layout
+// Person 50 calls Elevator 20 from Floor 10 down to Floor 11, enters and moves up to Floor 11
+// Requires calling an elevator
+
+// 2 floors
+Floor { 10 11 0 4 1 40 }
+Floor { 11 0 10 4 1 40 }
+
+// 1 elevator
+Elevator { 20 1 10 10 2 30 31 }
+
+// 1 floor interface calling elevator
+Interface { 40 1 20 }
+
+// 2 elevator interfaces calling floors
+Interface { 30 1 10 }
+Interface { 31 1 11 }
+
+// 1 person
+Person { 50 11 10 10 5 0 }

@@ -1,0 +1,24 @@
+// Reassign Elevator Layout
+// Faster elevator breaks after being assigned.
+// Other elevator needs to take over request.
+
+// 2 floors
+Floor { 10 11 0 10 1 40 }
+Floor { 11 0 10 10 1 40 }
+
+// 2 elevator
+Elevator { 20 1 10 11 2 30 31 }
+Elevator { 21 2 10 11 2 30 31 }
+
+// 1 floor interface calling elevator
+Interface { 40 2 20 21 }
+
+// 2 elevator interfaces calling floors
+Interface { 30 1 10 }
+Interface { 31 1 11 }
+
+// 1 person
+Person { 50 10 11 30 10 0 }
+
+// 1 event
+Event { Elevator::Malfunction 5 21 0 }

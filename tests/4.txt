@@ -1,0 +1,21 @@
+// Floor Height Elevator Layout
+// Person 50 enters already present Elevator on Floor 12 and moves up to Floor 10
+// Intermediate Floor 11 requires time calculation for travel distance
+
+// 3 floors
+Floor { 10 11 0 4 1 40 }
+Floor { 11 12 10 10 0 }
+Floor { 12 0 11 4 1 40 }
+
+// 1 elevator
+Elevator { 20 1 10 12 2 30 31 }
+
+// 1 floor interface calling elevator
+Interface { 40 1 20 }
+
+// 2 elevator interfaces calling floors
+Interface { 30 1 10 }
+Interface { 31 1 12 }
+
+// 1 person
+Person { 50 12 10 10 5 0 }

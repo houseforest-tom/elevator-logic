@@ -1,0 +1,23 @@
+// Assignment Elevator Layout
+// 2 persons call elevators. On both floors an elevator is present.
+// Select the correct one to open doors and just move to the other
+// floor.
+
+// 2 floors
+Floor { 10 11 0 4 1 40 }
+Floor { 11 0 10 4 1 40 }
+
+// 2 elevator
+Elevator { 20 1 10 11 2 30 31 }
+Elevator { 21 1 10 10 2 30 31 }
+
+// 1 floor interface calling elevator
+Interface { 40 2 20 21 }
+
+// 2 elevator interfaces calling floors
+Interface { 30 1 10 }
+Interface { 31 1 11 }
+
+// 2 person
+Person { 50 10 11 1 5 0 }
+Person { 51 11 10 1 5 0 }

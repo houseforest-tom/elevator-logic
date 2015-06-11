@@ -1,0 +1,22 @@
+// Speed Assign Elevator Layout
+// One person request an elevator. Both elevators
+// need to go to person's floor first and have
+// different speeds. Assign faster elevator to succeed.
+
+// 2 floors
+Floor { 10 11 0 10 1 40 }
+Floor { 11 0 10 10 1 40 }
+
+// 2 elevator
+Elevator { 20 1 10 11 2 30 31 }
+Elevator { 21 2 10 11 2 30 31 }
+
+// 1 floor interface calling elevator
+Interface { 40 2 20 21 }
+
+// 2 elevator interfaces calling floors
+Interface { 30 1 10 }
+Interface { 31 1 11 }
+
+// 1 person
+Person { 50 10 11 8 10 0 }
